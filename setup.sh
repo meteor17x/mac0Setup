@@ -7,7 +7,17 @@ brew install aria2
 brew install python3
 brew install vapoursynth
 brew install mpv --with-bundle --with-vapoursynth
+brew linapps mpv
 brew install mkvtoolnix --with-qt5
 #sudo python get-pip[4F900010].py
+curl -# -o get-pip.py https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+rm get-pip.py
 sudo pip install shadowsocks
 sudo python3 setup.py
+brew cask install firefox
+brew cask install gimp
+brew cask install virtualbox
+brew cask install libreoffice
+
+aria2c https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg

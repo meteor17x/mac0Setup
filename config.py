@@ -3,18 +3,15 @@
 #print（）
 import os
 homepath = os.path.expanduser('~')
-#print("aria2 token")
-#aria2_token = input()
+print("aria2 token")
+aria2_token = input()
 aria2_token = 'wwssaadd'
-#print("shadowsocks address")
-#shadowsocks_addr = input()
-shadowsocks_addr = '47.88.192.180'
-#print("shadowsocks server port")
-#shadowsocks_port = input()
-shadowsocks_port = '9717'
-#print("shadowsocks key")
-#shadowsocks_key = input()
-shadowsocks_key = 'GreatMeteor.23'
+print("shadowsocks address")
+shadowsocks_addr = input()
+print("shadowsocks server port")
+shadowsocks_port = input()
+print("shadowsocks key")
+shadowsocks_key = input()
 
 
 aria2_conf = open('%s/etc/aria2.conf' % homepath,'w')

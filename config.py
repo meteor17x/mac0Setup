@@ -12,6 +12,8 @@ print("shadowsocks server port")
 shadowsocks_port = input()
 print("shadowsocks key")
 shadowsocks_key = input()
+print("ss encrypt method")
+shadowsocks_method = input()
 
 
 aria2_conf = open('%s/etc/aria2.conf' % homepath,'w')
@@ -63,10 +65,10 @@ shadowsocks_conf.write('''\
     "server_port":%s,
     "local_port":1080,
     "password":"%s",
-    "method":"aes-256-cfb",
+    "method":"%s",
     "timeout":300
 }
-''' % (shadowsocks_addr,shadowsocks_port,shadowsocks_key))
+''' % (shadowsocks_addr,shadowsocks_port,shadowsocks_key,shadowsocks_method))
 
 shadowsocks_plist = open('%s/Library/LaunchAgents/shadowsocks.plist' % homepath,'w')
 shadowsocks_plist.write('''\
@@ -78,7 +80,8 @@ shadowsocks_plist.write('''\
 		<string>com.shadowsocks.app</string>
 		<key>ProgramArguments</key>
 		<array>
-			<string>/usr/local/bin/sslocal</string>
+			<string>python</string>
+			<string>%s/shadowsocks/shadowsocks/local.py</string>
 			<string>-c</string>
 			<string>%s/etc/shadowsocks.json</string>
 		</array>

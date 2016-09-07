@@ -13,7 +13,8 @@ brew install mkvtoolnix --with-qt5
 curl -# -o get-pip.py https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 rm get-pip.py
-sudo pip install shadowsocks
+#sudo pip install shadowsocks
+git clone -b master https://github.com/shadowsocks/shadowsocks.git
 sudo python3 setup.py
 brew cask install firefox
 brew cask install gimp

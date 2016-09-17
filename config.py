@@ -90,3 +90,25 @@ shadowsocks_plist.write('''\
 	</dict>
 </plist>
 ''' % homepath)
+
+dnscrypt_plist = open('/Library/LaunchDaemons/dnscrypt.plist' % homepath,'w')
+dnscrypt_plist.write('''\
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+        <dict>
+                <key>Label</key>
+                <string>com.dnscrypt.app</string>
+                <key>ProgramArguments</key>
+                <array>
+                        <string>dnscrypt-proxy</string>
+                        <string>-R</string>
+                        <string>cisco</string>
+                        <string>-a</string>
+                        <string>127.0.0.1:5353</string>
+                </array>
+                <key>RunAtLoad</key>
+                <true/>
+        </dict>
+</plist>
+''')

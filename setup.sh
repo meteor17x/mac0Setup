@@ -8,6 +8,8 @@ brew install python3
 brew install vapoursynth
 brew install mpv --with-bundle --with-vapoursynth
 brew linapps mpv
+brew install dnscrypt-proxy
+brew install dnsmasq --with-dnssec
 brew install mkvtoolnix --with-qt5
 #sudo python get-pip[4F900010].py
 curl -# -o get-pip.py https://bootstrap.pypa.io/get-pip.py
@@ -21,4 +23,4 @@ brew cask install gimp
 brew cask install virtualbox
 brew cask install libreoffice
 
-aria2c https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+#aria2c https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
